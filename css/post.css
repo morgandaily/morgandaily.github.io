@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    list-style: none;
+}
+a{
+    color:inherit;
+}
+html{
+    font-family: "\5FAE\8F6F\96C5\9ED1",Tahoma;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-align: justify;
+    text-justify:distribute-all-lines; /*ie6-8*/
+    text-align-last: justify; /* ie9*/
+    -moz-text-align-last: justify; /*ff*/
+    -webkit-text-align-last: justify; /*chrome 20+*/
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100% !important;
+    outline: 0;
+}
+body{
+    text-align: justify;
+
+    font-weight: 300;
+    line-height: 1.5em;
+    max-width: 698px;
+    width: 100%;
+    margin: 0 auto;
+    line-break: auto;
+    word-break: break-all;
+}
+.wrap{
+    width: 92%;
+    margin: 0 auto;
+}
+.appBanner{
+    width: 100%;
+    height:auto;
+    position: relative;
+}
+.getApp{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    margin: auto;
+}
+.close_btn{
+    width: 35px;
+    height: 35px;
+    /* background: url(/static/img/web/icons/close.png); */
+    background-size: 100%;
+    display: table;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 17px;
+    cursor: pointer;
+    margin: auto;
+}
+.contentFrom{
+    border-top: dotted #d2d2d2 1px;
+    margin: 20px auto;
+    width: 100%;
+    padding-top: 10px;
+}
+.contentFromText{
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+}
+.contentReadValue{
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+}
+
+.comments{
+    width: 100%;
+    margin: 20px auto;
+}
+.comment{
+    width: 100%;
+    border-bottom: dotted #d2d2d2 1px;
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+.commentUserFace{
+    width: 20%;
+}
+.commentUserFaceImg{
+    width:80%;
+    height:auto;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.commentUserName{
+    width:70%;
+    text-align: left;
+    font-weight: 900;
+    font-size: 13px;
+}
+.commentUserZan{
+    width: 30%;
+    text-align: right;
+    font-size: 13px;
+}
+.commentText{
+    width: 80%;
+    font-size: 13px;
+    color: #909090;
+}
+.full{
+    width: 100%;
+}
+.half{
+    width: 50%;
+}
+.textLeft{
+    text-align: left;
+}
+.textRight{
+    text-align: right;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight: 500;
+    color: #2f2f2f;
+    display: inline-block;
+}
+h1,h2,h3,h4,h5,h6{
+    width: 100%;
+}
+.comments h2{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+}
+.article-title{
+    width: 100%;
+    line-height:1.8em;
+    font-size: 20px;
+    color: #2f2f2f;
+    border-bottom: solid #d2d2d2 1px;
+    color: #2f2f2f;
+    padding: 10px 0px 10px 0px;
+
+}
+/* 文章信息 */
+.article-info{
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    font-size:13px;
+    overflow: hidden;
+    height: 24px;
+    line-height: 24px;
+    color: #909090;
+}
+.time_icon{
+    width: 13px;
+    height:13px;
+    background: url(/static/img/web/icons/time.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.from,.date,.time{
+    padding: 0 10px 0 10px;
+}
+.from_icon{
+    width: 10px;
+    height: 13px;
+    background: url(/static/img/web/icons/from.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* 文章信息 时间 */
+
+/* 文章信息结束 */
+.introduction{
+    font-size: 15px;
+    color: #909090;
+}
+img{
+    max-width: 100%;
+    border: none;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+p{
+    margin-top: 1em;
+}
+p[data-type="pic-title"]{
+    text-align: center;
+    font-size: 13px;
+}
+@media print{
+    html{
+        display: none;
+        /* 直接屏蔽掉打印机 */
+    }
+}
+@media (min-width: 700px) {
+    html{
+        background: #e7e8eb;
+    }
+    body{
+        border-left:1px solid #d9dadc;
+        border-right:1px solid #d9dadc;
+        background: #fff;
+    }
+}
+
+
+.clearfix{
+    float: left;
+    clear: both;
+}
+
+.quote{
+
+}
+
+.shadow{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+/* 背景色 */
+.bg_pink{
+    background-color: rgb(255,64,129);
+}
+.title{
+    color:rgba(0,0,0,0.87);
+}
+.text{
+    color: #2f2f2f;
+}
+.msg{
+    color:rgba(0,0,0,0.26);
+}
+.hide{
+    display: none;
+}
+
+.commentUserInfo,.commentTime{
+    font-size: 13px;
+}
+/* 女同学的图标在上，我不是男权主义者。 */
+.girl{
+    width: 20px;
+    height: 20px;
+    background: url(/static/img/web/icons/girl.png);
+    background-size: 100%;
+    display: inline-block;
+    margin-left: 10px;
+}
+.boy{
+    width: 20px;
+    height: 20px;
+    background: url(/static/img/web/icons/boy.png);
+    background-size: 100%;
+    display: inline-block;
+    margin-left: 10px;
+}
+.pink{
+    color: #f06292;
+}
+.blue{
+    color: #0288d1;
+}
+.context{
+    padding-bottom: 0px;
+}
+.pd{
+    padding-bottom: 50px;
+}
+.txtPic{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.txtPicImg{
+
+}
+.txtPicMark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+}
+.txtPicTitle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    display: table;
+    height: auto;
+    line-height: 1.5em;
+}
+.commentUserFaceImg{
+    margin-top: 5px;
+}
+.row{
+    display: table;
+    width: 100%;
+}
+.commentUserFace,.commentText,.commentUserName,.commentUserZan,.commentUserInfo,.commentTime{
+    display: table-cell;
+    vertical-align: top;
+}
+.from_icon,.from,.time_icon,.date,.time{
+    display: table-cell;
+    vertical-align: top;
+}
+/* 针对小屏幕的优化 */
+@media all and (max-width:330px){
+    /* 评论折行 字体变小 不折行 */
+    .contentFromText{
+        zoom: 0.9;
+    }
+    .contentReadValue{
+        zoom: 0.9;
+    }
+}
+@media all and (max-width:280px){
+    /* 评论折行 字体变小 不折行
+    .contentFromText{
+        zoom: 0.7;
+    }
+    .contentReadValue{
+        zoom: 0.7;
+    } */
+}
+
+.introduction{
+    color: #909090;
+}
+.text{
+    color: #2f2f2f;
+}
+.hide{
+    display: none;
+}
+.contentFromText,.contentReadValue{
+    font-size: 13px;
+    color: #909090;
+    margin: 20px auto;
+
+}
+b {
+    color: inherit;
+}
+.imgdesc {
+    font-size: 13px;
+    color: #909090;
+    margin: 2px 0px 2px 0px;
+    text-align: center;
+}
+@media all and ( min-width:1000px ) {
+    .article-title{
+        font-size: 25px;
+    }
+}
