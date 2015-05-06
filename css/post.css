@@ -189,6 +189,7 @@ h1,h2,h3,h4,h5,h6{
 .introduction{
     font-size: 15px;
     color: #909090;
+    margin:20px auto;
 }
 img{
     max-width: 100%;
@@ -352,9 +353,7 @@ p[data-type="pic-title"]{
     } */
 }
 
-.introduction{
-    color: #909090;
-}
+
 .text{
     color: #2f2f2f;
 }
