@@ -1,0 +1,48 @@
+/*
+author codetyphon
+* */
+function jsLoader(jsfile){
+    var script = document.createElement('script');
+    script.setAttribute('charset', 'utf8');
+    script.src =jsfile;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+function cssLoader(cssfile){
+    var link = document.createElement('link');
+    link.setAttribute('charset', 'utf8');
+    link.setAttribute('rel', 'stylesheet');
+    link.href =cssfile;
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+function PCtoMobile(PCtag,touchURL,PadUrl,WapUrl){
+    /*
+    * PCtag    ：PC端的关键字，有这个字就不跳转到移动端
+    * touchURL ：触屏的网站地址
+    * PadUrl   ：平板类网站地址
+    * WapUrl   ：最原始的移动网址
+    * */
+    if(!PadUrl){
+        PadUrl=touchURL;
+    }
+    if(!WapUrl){
+        WapUrl=touchURL;
+    }
+    if(window.location.toString().indexOf('pref=padindex') != -1){
+    }else{
+        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+            if(window.location.href.indexOf("?mobile")<0){
+                try{
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                        window.location.href=touchURL;
+                    }else if(/iPad/i.test(navigator.userAgent)){
+                        window.location.href=PadUrl;
+                    }else{
+                        window.location.href=WapUrl;
+                    }
+                }catch(e){
+                    console.log(e);
+                }
+            }
+        }
+    }
+}
